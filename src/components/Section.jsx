@@ -33,7 +33,7 @@ const Section = ({ id, bg, children, speed = 0.3 }) => {
       {/* background image (parallax) */}
       <motion.div
         style={{ y }}
-        className="absolute inset-0 bg-center bg-cover bg-no-repeat will-change-transform"
+        className="absolute inset-0 bg-center  bg-cover bg-no-repeat will-change-transform"
         // bg image from public folder
         // we set inline style for backgroundImage so Tailwind doesn't need extra config
         // Note: keep URL starting with / so it references public/
@@ -51,10 +51,10 @@ const Section = ({ id, bg, children, speed = 0.3 }) => {
       */}
       <motion.div
         style={{ y }}
-        className="absolute inset-0"
+        className="absolute inset-0 "
       >
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url("${bg}")` }}
         />
       </motion.div>
@@ -63,7 +63,7 @@ const Section = ({ id, bg, children, speed = 0.3 }) => {
       <div className="absolute inset-0" />
 
       {/* content */}
-      <div className="relative z-20 w-full h-auto px-6 md:px-20">
+      <div className="relative z-20 w-full max-w-full h-auto px-6 md:px-20">
         {children}
       </div>
     </section>
