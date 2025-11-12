@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* optional: ensure body fills page */
+body, #root {
+  height: 100%;
+}
+
+
