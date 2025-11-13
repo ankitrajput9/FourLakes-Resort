@@ -18,7 +18,7 @@ const Home = () => {
       {/* Hero section */}
       <Hero />
       {/* Welcome section */}
-      <Welcome />
+      {/* <Welcome /> */}
       {/* Gallary Section */}
       <Gallary />
       {/* Booking / CTA section */}

@@ -36,37 +36,30 @@ const ScrollReveal = ({
 
     const scroller = scrollContainerRef && scrollContainerRef.current ? scrollContainerRef.current : window;
 
-    gsap.fromTo(el, { transformOrigin: '0% 50%', rotate: baseRotation }, {
-      ease: 'none',
-      rotate: 0,
-      scrollTrigger: {
-        trigger: el,
-        scroller,
-        start: 'top bottom',
-        end: rotationEnd,
-        scrub: true
+    gsap.fromTo(
+      el,
+      { transformOrigin: '0% 50%', rotate: baseRotation },
+      {
+        ease: 'none',
+        rotate: 0,
+        scrollTrigger: {
+          trigger: el,
+          scroller,
+          start: 'top bottom',
+          end: rotationEnd,
+          scrub: true
+        }
       }
-    });
+    );
 
     const wordElements = el.querySelectorAll('.word');
 
-    gsap.fromTo(wordElements, { opacity: baseOpacity, willChange: 'opacity' }, {
-      ease: 'none',
-      opacity: 1,
-      stagger: 0.05,
-      scrollTrigger: {
-        trigger: el,
-        scroller,
-        start: 'top bottom-=20%',
-        end: wordAnimationEnd,
-        scrub: true
-      }
-    });
-
-    if (enableBlur) {
-      gsap.fromTo(wordElements, { filter: `blur(${blurStrength}px)` }, {
+    gsap.fromTo(
+      wordElements,
+      { opacity: baseOpacity, willChange: 'opacity' },
+      {
         ease: 'none',
-        filter: 'blur(0px)',
+        opacity: 1,
         stagger: 0.05,
         scrollTrigger: {
           trigger: el,
@@ -75,7 +68,26 @@ const ScrollReveal = ({
           end: wordAnimationEnd,
           scrub: true
         }
-      });
+      }
+    );
+
+    if (enableBlur) {
+      gsap.fromTo(
+        wordElements,
+        { filter: `blur(${blurStrength}px)` },
+        {
+          ease: 'none',
+          filter: 'blur(0px)',
+          stagger: 0.05,
+          scrollTrigger: {
+            trigger: el,
+            scroller,
+            start: 'top bottom-=20%',
+            end: wordAnimationEnd,
+            scrub: true
+          }
+        }
+      );
     }
 
     return () => {
@@ -85,8 +97,7 @@ const ScrollReveal = ({
 
   return (
     <h2 ref={containerRef} className={`my-5 ${containerClassName}`}>
-      <p
-        className={`text-[clamp(1.6rem,4vw,3rem)] leading-normal font-semibold ${textClassName}`}>{splitText}</p>
+      <p className={`text-[clamp(1.6rem,4vw,3rem)] leading-normal font-semibold ${textClassName}`}>{splitText}</p>
     </h2>
   );
 };
