@@ -5,8 +5,9 @@ import Hero from "./Hero";
 import Welcome from "./Welcome";
 import Gallary from "./Gallary";
 import Booking from "./Booking";
-import Contact from "./Contact";
+
 import Background from "@/components/cards/BackGround";
+import Sticky from "./Sticky";
 
 
 const Home = () => {
@@ -23,9 +24,9 @@ const Home = () => {
       {/* Booking / CTA section */}
       <Booking />
       {/* Contact */}
-      <Contact />
+      <Sticky/>
       {/* Footer  */}
-      <Footer />
+      {/* <Footer /> */}
 
 
     </div>

@@ -28,7 +28,7 @@ const Section = ({ id, bg, children, speed = 0.3 }) => {
     <section
       id={id}
       ref={ref}
-      className="relative h-full w-full overflow-hidden flex items-center"
+      className="relative h-full w-full overflow-hidden  flex items-center"
     >
       {/* background image (parallax) */}
       <motion.div

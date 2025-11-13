@@ -1,49 +1,47 @@
-import React from 'react';
+import React from "react";
 import Section from "../components/Section";
 import SplitText from "../components/Texts/SplitText";
 import CardSection from "@/components/cards/CardSection";
 
-
 const Booking = () => {
-     const handleAnimationComplete = () => {
-    console.log('All letters have animated!');
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
   };
+
   return (
-    
-      <Section  id="booking" bg="/background/bg.jpg" speed={0.3}>
-        <div className=" flex flex-col h-auto mt-30 items-center justify-center">
-          <SplitText
-            text="Book Your Stay at Four Lakes Hotel"
-            className="text-4xl font-bold py-4 text-center"
-            delay={100}
-            duration={0.6}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
-            onLetterAnimationComplete={handleAnimationComplete}
-          />
-          <p className="text-lg text-black md:text-xl max-w-2xl mx-auto font-light">
-            Find Comfort and Convenience in Every Room
-          </p>
-          <div className="flex  p-10 gap-25 " style={{ height: '600px', position: 'relative' }}>
+    <Section id="booking" bg="/background/bg.jpg" speed={0.3}>
+      <div className="w-full min-h-screen flex flex-col items-center justify-start pt-20 px-6">
 
-            <div className="w-full h-screen z-10 text-white">
-              {/* Other sections like Hero, Lake, etc. */}
-              <CardSection />
-              {/* Continue with Booking section */}
-            </div>
+        {/* Heading */}
+        <SplitText
+          text="Book Your Stay at Four Lakes Hotel"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold py-4 text-center text-green-950"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
 
+        {/* Subtitle */}
+        <p className="text-lg text-black/60 md:text-xl text-center   mx-auto font-medium">
+          Find Comfort and Convenience in Every Room
+        </p>
 
+        {/* Cards Section */}
+        <div className="w-full mt-10 mb-20 flex justify-center">
+          <div className="w-full max-w-6xl px-4 md:px-0">
+            <CardSection />
           </div>
-
         </div>
-      </Section>
-
+      </div>
+    </Section>
   );
-}
+};
 
 export default Booking;

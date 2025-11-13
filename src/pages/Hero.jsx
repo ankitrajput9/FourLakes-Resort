@@ -1,23 +1,24 @@
-import React from 'react';
+import React from "react";
 import SplitText from "../components/Texts/SplitText";
 import Section from "../components/Section";
-import TiltedCard from '@/components/cards/TiltedCard';
-
-
+import TiltedCard from "@/components/cards/TiltedCard";
 
 const Hero = () => {
-     const handleAnimationComplete = () => {
-    console.log('All letters have animated!');
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
   };
+
   return (
-     <Section id="hero" bg="/images/main." speed={0.25}>
-        <div className='flex justify-between h-screen'>
-           
-        <div className=" text-black flex flex-col items-center justify-center text-center">
-          <h1 className="text-6xl md:text-7xl font-extrabold mb-4">
+    <Section id="hero" bg="/images/main3.jpg" speed={0.25}>
+      <div className="w-full h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-4 md:px-10 lg:px-20 gap-12">
+
+        {/* LEFT TEXT BLOCK */}
+        <div className="text-center lg:text-left flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2">
+
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-green-950 leading-tight mb-4">
             <SplitText
               text="Welcome to Four Lakes"
-              className="text-7xl font-extrabold text-center"
+              className="font-extrabold"
               delay={100}
               duration={0.6}
               ease="power3.out"
@@ -26,44 +27,52 @@ const Hero = () => {
               to={{ opacity: 1, y: 0 }}
               threshold={0.1}
               rootMargin="-100px"
-              textAlign="center"
               onLetterAnimationComplete={handleAnimationComplete}
             />
           </h1>
-          <p className="max-w-2xl text-black/60 text-lg md:text-2xl font-medium">
+       <div className="flex flex-col justify-center items-center">
+          <p className="max-w-md text-center sm:max-w-lg text-black/80 text-lg sm:text-xl md:text-2xl font-medium mt-3">
             Luxury lakeside stay, serene views, unforgettable experiences.
           </p>
-          <div className="mt-8">
-            <a href="#booking" className="px-6 py-3  bg-black/10 font-bold rounded-lg backdrop-blur-sm hover:bg-black/20">
-    BookNow
+
+          <div className="mt-6 ">
+            <a
+              href="#booking"
+              className="px-6 py-3  text-white bg-green-900/90 font-bold rounded-lg hover:bg-green-800 transition-all"
+            >
+              Book Now
             </a>
           </div>
+
+       </div>
         </div>
-           <div className=' text-black flex items-center justify-center text-center'>
-               <TiltedCard
-  imageSrc="/images/main.jpg"
-  altText="FourLakes WaterPark"
-  captionText="FourLakes WaterPark"
-  containerHeight="600px"
-  containerWidth="600px"
-  imageHeight="450px"
-  imageWidth="450px"
-  rotateAmplitude={12}
-  scaleOnHover={1.2}
-  showMobileWarning={false}
-  showTooltip={true}
-  displayOverlayContent={true}
-  overlayContent={
-    <p className="tilted-card-demo-text text-2xl font-bold text-black">
-     FourLakes WaterPark
-    </p>
-  }
-/>
-  
-            </div>
+
+        {/* RIGHT IMAGE BLOCK */}
+        <div className="w-full lg:w-300 flex items-center justify-center">
+          <TiltedCard
+            imageSrc="/images/move2.jpg"
+            altText="FourLakes WaterPark"
+            captionText="FourLakes WaterPark"
+            containerHeight="350px"
+            containerWidth="300px"
+            imageHeight="400px"
+            imageWidth="400px"
+            rotateAmplitude={12}
+            scaleOnHover={1.15}
+            showMobileWarning={false}
+            showTooltip={false}
+            displayOverlayContent={true}
+            overlayContent={
+              <p className="tilted-card-demo-text text-xl sm:text-2xl font-bold text-black">
+                FourLakes WaterPark
+              </p>
+            }
+          />
         </div>
-      </Section>
+
+      </div>
+    </Section>
   );
-}
+};
 
 export default Hero;

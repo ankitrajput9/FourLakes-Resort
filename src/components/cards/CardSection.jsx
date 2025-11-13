@@ -51,7 +51,7 @@ const CardSection = () => {
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 href="#booking"
-                className="inline-block px-6 py-3 bg-blue-500 rounded-lg text-white font-semibold text-sm hover:bg-blue-600 transition-colors"
+                className="inline-block px-6 py-3 bg-green-950/80 rounded-lg text-white font-semibold text-sm hover:bg-blue-600 transition-colors"
               >
                 Book Now
               </motion.a>

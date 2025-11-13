@@ -404,12 +404,12 @@ const PillNav = ({
               e.currentTarget.style.color = 'var(--hover-text, #fff)';
             };
             const hoverOut = e => {
-              e.currentTarget.style.background = 'var(--pill-bg, #fff)';
-              e.currentTarget.style.color = 'var(--pill-text, #fff)';
+              e.currentTarget.style.background = 'var(--pill-bg, #000)';
+              e.currentTarget.style.color = 'var(--pill-text, #000)';
             };
 
             const linkClasses =
-              'block py-3 px-4 text-[16px] font-medium rounded-[50px] transition-all duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)]';
+              'block py-4 px-8 text-[25px] font-medium rounded-[20px] transition-all duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)]';
 
             return (
               <li key={item.href}>
