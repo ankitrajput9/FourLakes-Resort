@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <Section id="hero" bg="/images/main3.jpg" speed={0.25}>
+    <Section id="hero" bg="images/main3.jpg" speed={0.25}>
       <div className="w-full h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-4 md:px-10 lg:px-20 gap-12">
 
         {/* LEFT TEXT BLOCK */}
@@ -50,7 +50,7 @@ const Hero = () => {
         {/* RIGHT IMAGE BLOCK */}
         <div className="w-full lg:w-300 flex items-center justify-center">
           <TiltedCard
-            imageSrc="/images/move2.jpg"
+            imageSrc="images/move2.jpg"
             altText="FourLakes WaterPark"
             captionText="FourLakes WaterPark"
             containerHeight="350px"

@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 const CardSection = () => {
   const cards = [
     {
-      image: "/images/resort.avif",
+      image: "images/resort.avif",
       title: "Lake View Room",
       description:
         "Enjoy stunning panoramic views of the lake from your private balcony. Perfect for couples and nature lovers.",
     },
     {
-      image: "/images/restro.avif",
+      image: "images/restro.avif",
       title: "Luxury Suite",
       description:
         "Spacious suite with premium amenities, cozy interiors, and a relaxing bathtub for your comfort.",
     },
     {
-      image: "/images/restro1.webp",
+      image: "images/restro1.webp",
       title: "Private Villa",
       description:
         "Exclusive villa surrounded by greenery and calm waters. Ideal for family vacations and private stays.",

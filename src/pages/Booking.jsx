@@ -9,7 +9,7 @@ const Booking = () => {
   };
 
   return (
-    <Section id="booking" bg="/background/bg.jpg" speed={0.3}>
+    <Section id="booking" bg="background/bg.jpg" speed={0.3}>
       <div className="w-full min-h-screen flex flex-col items-center justify-start pt-20 px-6">
 
         {/* Heading */}

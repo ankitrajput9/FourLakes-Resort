@@ -9,7 +9,7 @@ import ParallaxSticky from '@/components/ui/ParallaxSticky';
 const Sticky = () => {
   return (
       <div >
-    <Section bg="/background/back.jpg" >
+    <Section bg="background/back.jpg" >
  <ParallaxSticky
   image=""
   height="100vh"

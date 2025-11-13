@@ -8,7 +8,7 @@ const Background = () => {
     <motion.div
       className="fixed top-0 left-0 w-full h-full bg-cover bg-center z-0"
       style={{
-        backgroundImage: "url('/background/bg.avif')",
+        backgroundImage: "url('background/bg.avif')",
         y,
       }}
     >

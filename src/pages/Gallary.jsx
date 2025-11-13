@@ -7,43 +7,43 @@ const Gallary = () => {
 
     const items = [
   {
-    image: '/images/pool.avif',
+    image: 'images/pool.avif',
     link: '',
     title: 'Pool',
     description: 'Relax and unwind in our crystal-clear luxury swimming pool.'
   },
   {
-    image: '/images/vibe.avif',
+    image: 'images/vibe.avif',
     link: '',
     title: 'Cottage',
     description: 'Enjoy cozy, nature-inspired cottages with serene lake views.'
   },
   {
-    image: '/images/resort.avif',
+    image: 'images/resort.avif',
     link: '',
     title: 'Resort',
     description: 'Experience comfort, elegance, and hospitality at our premium resort.'
   },
   {
-    image: '/images/launge.avif',
+    image: 'images/launge.avif',
     link: '',
     title: 'Lounge',
     description: 'A perfect place to relax, socialize, and enjoy peaceful ambience.'
   },
   {
-    image: '/images/room.avif',
+    image: 'images/room.avif',
     link: '',
     title: 'Rooms',
     description: 'Spacious, luxurious rooms crafted for comfort and relaxation.'
   },
   {
-    image: '/images/food2.jpg',
+    image: 'images/food2.jpg',
     link: '',
     title: 'Food',
     description: 'Delicious multi-cuisine dishes prepared by our expert chefs.'
   },
   {
-    image: '/images/water.avif',
+    image: 'images/water.avif',
     link: '',
     title: 'WaterPark',
     description: 'Splash, slide, and enjoy thrilling water park adventures.'
